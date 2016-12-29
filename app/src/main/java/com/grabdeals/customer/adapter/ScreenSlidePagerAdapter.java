@@ -4,7 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.grabdeals.shop.fragment.ScreenSlidePageFragment;
+import com.grabdeals.customer.fragment.ScreenSlidePageFragment;
 
 import java.util.ArrayList;
 import java.util.List;

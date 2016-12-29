@@ -9,7 +9,7 @@ import android.content.Intent;
 import android.support.v4.content.WakefulBroadcastReceiver;
 import android.util.Log;
 
-import com.grabdeals.shop.service.GcmMessageHandler;
+import com.grabdeals.customer.service.GcmMessageHandler;
 
 
 /**

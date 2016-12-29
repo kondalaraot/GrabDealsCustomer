@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+<LinearLayout
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:id="@+id/activity_offer_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.grabdeals.shop.ui.OfferDetailsActivity">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_offer_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="India's mostFashionable sale"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/colorPrimary" />
+            <TextView
+                android:drawableLeft="@android:drawable/ic_menu_share"
+                android:id="@+id/tv_shop_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:gravity="center_vertical"
+                android:drawablePadding="10dp"
+                android:typeface="serif"
+                android:text="Big Bazar"
+                android:paddingTop="5dp"
+                android:textColor="@color/colorPrimary"
+                 />
+
+            <TextView
+                android:id="@+id/tv_offer_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/placeholder"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:text="g-35 carat building ameerpet road  Hyderabad,telanaga 500073"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tv_offer_phone_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:drawableLeft="@android:drawable/ic_menu_call"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="040 4260 7040"
+                 />
+
+            <TextView
+                android:id="@+id/tv_shop_url"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@android:drawable/ic_menu_view"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:inputType="textUri"
+                android:maxLines="1"
+                android:text="http://www.bigbazar.com"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_offer_timings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@android:drawable/ic_lock_idle_alarm"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="Every day 10:30 AM to 10 PM" />
+
+            <TextView
+                android:id="@+id/tv_offer_end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/clock"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textColor="@color/colorPrimary"
+                android:text="Ends : " />
+        </LinearLayout>
+
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color" />
+
+    <TextView
+        android:id="@+id/tv_offer_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="10"
+        android:lineSpacingExtra="4dp"
+        android:text="Flat 50 to 60 % text data testr sampke data" />
+
+    <!--<ImageView
+        android:id="@+id/iv_offer"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/btn_star"/>-->
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <com.grabdeals.shop.util.ClickableViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <com.grabdeals.shop.ui.CirclePageIndicator
+        android:id="@+id/indicator"
+        android:gravity="bottom|center_horizontal"
+        app:indicator_spacing="5dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    </FrameLayout>
+
+</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -4,7 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.grabdeals.shop.fragment.FullScreenZoomFragment;
+import com.grabdeals.customer.fragment.FullScreenZoomFragment;
 
 import java.util.ArrayList;
 import java.util.List;

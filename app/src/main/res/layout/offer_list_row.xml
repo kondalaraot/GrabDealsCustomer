@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/custom_bg"
+    android:clickable="true"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tv_offer_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:lines="1"
+        android:textColor="@color/colorPrimary"
+        android:typeface="serif"
+        android:text="India's most fashionalble sale "
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:id="@+id/tv_offer_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="Flat 50 to 60 % off on wide range of apparel,in addition to that longtext testing static data " />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/label_offer_ends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/clock"
+            android:drawablePadding="5dp"
+            android:text="Ends: " />
+
+        <TextView
+            android:layout_marginRight="5dp"
+            android:id="@+id/value_offer_ends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text="Sep 17,2016 " />
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorPrimary"
+            android:drawableLeft="@drawable/placeholder"
+            android:drawablePadding="5dp"
+            android:lines="1"
+            android:ellipsize="end"
+            android:text="Ameerpet:" />
+
+
+    </LinearLayout>
+</LinearLayout>

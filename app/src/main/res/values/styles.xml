@@ -11,7 +11,9 @@
         <item name="buttonStyle">@style/RobotoButtonStyle</item>
         <item name="android:editTextStyle">@style/App_EditTextStyle</item>
 
+<!--
         <item name="android:colorControlNormal">@color/myControlColor</item>
+-->
 
         <item name="android:windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>

@@ -1,7 +1,6 @@
 package com.grabdeals.customer.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,9 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.grabdeals.shop.R;
-import com.grabdeals.shop.model.ShopLocation;
-import com.grabdeals.shop.ui.AddEditMoreLocationsActivity;
+import com.grabdeals.customer.R;
+import com.grabdeals.customer.model.ShopLocation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -71,9 +69,9 @@ public class ShopAddressesAdapter extends ArrayAdapter<ShopLocation> {
             @Override
             public void onClick(View v) {
                 ShopLocation locTag = (ShopLocation) v.getTag();
-                Intent intent = new Intent(mContext, AddEditMoreLocationsActivity.class);
+               /* Intent intent = new Intent(mContext, AddEditMoreLocationsActivity.class);
                 intent.putExtra("ShopLocationObj",locTag);
-                mContext.startActivity(intent);
+                mContext.startActivity(intent);*/
 
             }
         });
