@@ -19,13 +19,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
-import com.grabdeals.shop.R;
-import com.grabdeals.shop.util.APIParams;
-import com.grabdeals.shop.util.Constants;
-import com.grabdeals.shop.util.ImageUtils;
-import com.grabdeals.shop.util.NetworkManager;
-import com.grabdeals.shop.util.NetworkUtil;
-import com.grabdeals.shop.util.VolleyCallbackListener;
+import com.grabdeals.customer.util.APIParams;
+import com.grabdeals.customer.util.Constants;
+import com.grabdeals.customer.util.ImageUtils;
+import com.grabdeals.customer.util.NetworkManager;
+import com.grabdeals.customer.util.NetworkUtil;
+import com.grabdeals.customer.util.VolleyCallbackListener;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -34,7 +33,7 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
-public class RegisterShopKeeperActivity extends BaseAppCompatActivity implements View.OnClickListener,VolleyCallbackListener{
+public class RegisterShopKeeperActivity extends BaseAppCompatActivity implements View.OnClickListener,VolleyCallbackListener {
 
     private final String TAG = "RegisterShopKeeperAct";
 

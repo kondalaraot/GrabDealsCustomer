@@ -16,8 +16,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.grabdeals.shop.R;
-import com.grabdeals.shop.util.PreferenceManager;
+import com.grabdeals.customer.util.PreferenceManager;
 
 
 /**Common Activity class for default functionalties in all activities

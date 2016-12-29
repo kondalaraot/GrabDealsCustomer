@@ -4,7 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
-import com.grabdeals.shop.ui.LoginActivity;
+import com.grabdeals.customer.ui.LoginActivity;
+
 
 /**
  * Created by KTirumalsetty on 11/2/2016.

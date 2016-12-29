@@ -12,7 +12,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
 import com.grabdeals.customer.R;
+import com.grabdeals.customer.model.Account;
 import com.grabdeals.customer.util.APIParams;
 import com.grabdeals.customer.util.Constants;
 import com.grabdeals.customer.util.NetworkManager;
@@ -207,9 +209,9 @@ public class LoginActivity extends BaseAppCompatActivity  implements VolleyCallb
                     Intent intent = new Intent(this,MainDrawerActivity.class);
                     startActivity(intent);
                 }else{
-                    Intent intent = new Intent(this,EnterShopDetailsActivity.class);
+                   /* Intent intent = new Intent(this,EnterShopDetailsActivity.class);
                     intent.putExtra("ARG_SHOP_ID",shopID);
-                    startActivity(intent);
+                    startActivity(intent);*/
 
                 }
 
