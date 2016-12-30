@@ -4,8 +4,8 @@ import android.content.Context;
 import android.os.Build;
 import android.telephony.TelephonyManager;
 
-import com.grabdeals.shop.BuildConfig;
-import com.grabdeals.shop.MyApplication;
+import com.grabdeals.customer.BuildConfig;
+import com.grabdeals.customer.MyApplication;
 
 import java.net.NetworkInterface;
 import java.util.Collections;
@@ -13,12 +13,13 @@ import java.util.List;
 import java.util.Locale;
 
 public class UserAgent {
+    private static final String TAG = "UserInfo";
 
     private static final String OS_NAME = "Android";
     private static final String CLIENT_TYPE = "shop_keeper";
     //App Code (APP001  - User app,  APP002 - Shop) 
-    private static final String APP_CODE = "APP002";
-    private static final String TAG = "UserInfo";
+    private static final String APP_CODE = "APP001";
+
 
     public static String GCM_TOKEN = "";
 

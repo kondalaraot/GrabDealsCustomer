@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
-import com.grabdeals.shop.service.GCMRegistrationIntentService;
+import com.grabdeals.customer.service.GCMRegistrationIntentService;
 
 public class SplashScreenActivity extends BaseAppCompatActivity {
 

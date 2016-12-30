@@ -201,7 +201,7 @@ public class LoginActivity extends BaseAppCompatActivity  implements VolleyCallb
                 getPrefManager().setShopName(account.getString("shop_name"));
                 getPrefManager().setShopMobileNO(accountObj.getMobile_no());
                 getPrefManager().setShopWebsite(accountObj.getWeb_site());
-                String imageUrl = Constants.SHOP_AVATAR_URL+ getPrefManager().getAccID()+"_"+getPrefManager().getShopID()+".png";
+                String imageUrl = Constants.USER_AVATAR_URL+ getPrefManager().getAccID()+"_"+getPrefManager().getShopID()+".png";
                 if(Constants.DEBUG) Log.d(TAG,"Shop image url"+imageUrl);
                 getPrefManager().setShopUrl(imageUrl);
                 if(accountObj.getShop_branches()!=null && accountObj.getShop_branches().size()>0){

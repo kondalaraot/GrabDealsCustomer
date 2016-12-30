@@ -16,6 +16,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.grabdeals.customer.R;
 import com.grabdeals.customer.util.PreferenceManager;
 
 

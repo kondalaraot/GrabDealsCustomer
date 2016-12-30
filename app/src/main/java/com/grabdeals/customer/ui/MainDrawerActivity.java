@@ -23,6 +23,7 @@ import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.grabdeals.customer.R;
 import com.grabdeals.customer.adapter.OffersAdapter;
 import com.grabdeals.customer.model.Offer;
 import com.grabdeals.customer.util.ClickListener;

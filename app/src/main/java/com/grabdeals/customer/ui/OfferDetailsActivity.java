@@ -112,7 +112,7 @@ public class OfferDetailsActivity extends BaseAppCompatActivity implements Volle
             mTvOfferDesc.setText(mOffer.getDescription());
 //        mIvOffer.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.office_building_icon, null));
 //            mIvOffer.setDefaultImageResId(R.drawable.office_building_icon);
-            String shorUrl = Constants.SHOP_AVATAR_URL+getPrefManager().getAccID()+"_"+getPrefManager().getShopID()+".png";
+            String shorUrl = Constants.USER_AVATAR_URL+getPrefManager().getAccID()+"_"+getPrefManager().getShopID()+".png";
             Log.d(TAG,shorUrl);
             /*mIvOffer.setImageUrl(shorUrl,NetworkManager.getInstance().getImageLoader());
             mIvOffer.setErrorImageResId(android.R.drawable.ic_dialog_alert);*/
@@ -137,7 +137,7 @@ public class OfferDetailsActivity extends BaseAppCompatActivity implements Volle
         mTvOfferEndDate = (TextView)findViewById( R.id.tv_offer_end_date );
         mTvOfferDesc = (TextView)findViewById( R.id.tv_offer_desc );
 //        mIvOffer = (ImageView) findViewById( R.id.iv_offer );
-        String shorUrl = Constants.SHOP_AVATAR_URL+getPrefManager().getAccID()+"_"+getPrefManager().getShopID()+".png";
+        String shorUrl = Constants.USER_AVATAR_URL+getPrefManager().getAccID()+"_"+getPrefManager().getShopID()+".png";
         Log.d(TAG,shorUrl);
 //        mIvShop.setDefaultImageResId(R.drawable.default_user);
 //        mIvShop.setImageUrl(shorUrl,NetworkManager.getInstance().getImageLoader());
@@ -147,7 +147,7 @@ public class OfferDetailsActivity extends BaseAppCompatActivity implements Volle
         final ArrayList<String> attachmentUrls= new ArrayList<String>();
         final List<Attachment> attachments = mOffer.getAttachments();
         for (Attachment attachment : attachments) {
-            attachmentUrls.add(Constants.SHOP_OFFER_AVATAR_URL+attachment.getImage_path()+".png");
+            attachmentUrls.add(Constants.USER_OFFER_AVATAR_URL+attachment.getImage_path()+".png");
         }
         ClickableViewPager pager = (ClickableViewPager) findViewById(R.id.pager);
         ScreenSlidePagerAdapter pagerAdapter =new ScreenSlidePagerAdapter(getSupportFragmentManager());
@@ -223,7 +223,7 @@ public class OfferDetailsActivity extends BaseAppCompatActivity implements Volle
                             showProgress("Deleting offer..");
                             Map<String,String> map = new HashMap<String, String>();
                             map.put(APIParams.PARAM_OFFER_ID,mOffer.getOffer_id());
-                            NetworkManager.getInstance().postRequest(Constants.API_SHOP_DELETE_OFFER,map,OfferDetailsActivity.this,Constants.API_SHOP_DELETE_OFFER_REQ_CODE);
+                            NetworkManager.getInstance().postRequest(Constants.API_USER_DELETE_OFFER,map,OfferDetailsActivity.this,Constants.API_USER_DELETE_OFFER_REQ_CODE);
                         }else {
                             showAlert("Please check network connection..");
                         }
@@ -243,7 +243,7 @@ public class OfferDetailsActivity extends BaseAppCompatActivity implements Volle
         dismissProgress();
         try {
             JSONObject response = (JSONObject) object;
-            if(reqCode == Constants.API_SHOP_DELETE_OFFER_REQ_CODE){
+            if(reqCode == Constants.API_USER_DELETE_OFFER_REQ_CODE){
                 if (response!=null && response.getInt("code") == 200) {
                     /*Intent intent = new Intent(this,MainActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

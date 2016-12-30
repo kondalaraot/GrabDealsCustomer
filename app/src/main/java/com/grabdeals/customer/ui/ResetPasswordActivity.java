@@ -8,12 +8,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.grabdeals.shop.R;
-import com.grabdeals.shop.util.APIParams;
-import com.grabdeals.shop.util.Constants;
-import com.grabdeals.shop.util.NetworkManager;
-import com.grabdeals.shop.util.NetworkUtil;
-import com.grabdeals.shop.util.VolleyCallbackListener;
+import com.grabdeals.customer.R;
+import com.grabdeals.customer.util.APIParams;
+import com.grabdeals.customer.util.Constants;
+import com.grabdeals.customer.util.NetworkManager;
+import com.grabdeals.customer.util.NetworkUtil;
+import com.grabdeals.customer.util.VolleyCallbackListener;
 
 import org.json.JSONObject;
 
@@ -60,7 +60,7 @@ public class ResetPasswordActivity extends BaseAppCompatActivity  implements Vie
             if(validate()){
                 if(NetworkUtil.isNetworkAvailable(this)){
                     showProgress("Setting new password..");
-                    NetworkManager.getInstance().postRequest(Constants.API_SHOP_SET_PASSWORD,prepareSendOtpPostParams(),this,Constants.API_SHOP_SET_PASSWORD_REQ_CODE);
+                    NetworkManager.getInstance().postRequest(Constants.API_USER_SET_PASSWORD,prepareSendOtpPostParams(),this,Constants.API_USER_SET_PASSWORD_REQ_CODE);
 
                 }else{
                     showAlert("Please check your network..");
@@ -114,7 +114,7 @@ public class ResetPasswordActivity extends BaseAppCompatActivity  implements Vie
         dismissProgress();
         JSONObject response = (JSONObject) object;
         switch (reqCode){
-            case Constants.API_SHOP_SET_PASSWORD_REQ_CODE:
+            case Constants.API_USER_SET_PASSWORD_REQ_CODE:
                 try {
                     if(response.getInt("code") == 200){
                         Intent intent = new Intent();

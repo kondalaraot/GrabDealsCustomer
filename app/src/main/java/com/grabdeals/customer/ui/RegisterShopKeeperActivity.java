@@ -19,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
+import com.grabdeals.customer.R;
 import com.grabdeals.customer.util.APIParams;
 import com.grabdeals.customer.util.Constants;
 import com.grabdeals.customer.util.ImageUtils;

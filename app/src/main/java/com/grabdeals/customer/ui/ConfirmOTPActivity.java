@@ -17,13 +17,13 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.grabdeals.shop.R;
-import com.grabdeals.shop.util.APIParams;
-import com.grabdeals.shop.util.Constants;
-import com.grabdeals.shop.util.FileUtils;
-import com.grabdeals.shop.util.ImageUtils;
-import com.grabdeals.shop.util.NetworkManager;
-import com.grabdeals.shop.util.VolleyCallbackListener;
+import com.grabdeals.customer.R;
+import com.grabdeals.customer.util.APIParams;
+import com.grabdeals.customer.util.Constants;
+import com.grabdeals.customer.util.FileUtils;
+import com.grabdeals.customer.util.ImageUtils;
+import com.grabdeals.customer.util.NetworkManager;
+import com.grabdeals.customer.util.VolleyCallbackListener;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -32,7 +32,7 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ConfirmOTPActivity extends BaseAppCompatActivity implements View.OnClickListener,VolleyCallbackListener{
+public class ConfirmOTPActivity extends BaseAppCompatActivity implements View.OnClickListener,VolleyCallbackListener {
 
     private static final String TAG = "ConfirmOTPActivity";
 
@@ -295,7 +295,7 @@ public class ConfirmOTPActivity extends BaseAppCompatActivity implements View.On
                         getPrefManager().setShopID(account.getString("shop_id"));
                         getPrefManager().setShopName(account.getString("shop_name"));
                         getPrefManager().setShopMobileNO(account.getString("mobile_no"));
-                        startActivity(new Intent(this,EnterShopDetailsActivity.class));
+                        startActivity(new Intent(this,LoginActivity.class));
                         finish();
                     }
                 }else{

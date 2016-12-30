@@ -7,8 +7,8 @@ import android.util.Log;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.google.android.gms.iid.InstanceID;
-import com.grabdeals.shop.R;
-import com.grabdeals.shop.util.UserAgent;
+import com.grabdeals.customer.R;
+import com.grabdeals.customer.util.UserAgent;
 
 
 /**

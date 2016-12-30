@@ -8,19 +8,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.grabdeals.shop.R;
-import com.grabdeals.shop.util.APIParams;
-import com.grabdeals.shop.util.Constants;
-import com.grabdeals.shop.util.NetworkManager;
-import com.grabdeals.shop.util.NetworkUtil;
-import com.grabdeals.shop.util.VolleyCallbackListener;
+import com.grabdeals.customer.R;
+import com.grabdeals.customer.util.APIParams;
+import com.grabdeals.customer.util.Constants;
+import com.grabdeals.customer.util.NetworkManager;
+import com.grabdeals.customer.util.NetworkUtil;
+import com.grabdeals.customer.util.VolleyCallbackListener;
 
 import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class RequestOtpActivity extends BaseAppCompatActivity  implements View.OnClickListener,VolleyCallbackListener{
+public class RequestOtpActivity extends BaseAppCompatActivity  implements View.OnClickListener,VolleyCallbackListener {
 
     private EditText mEtMobileNo;
     private Button mBtnRequestOtp;

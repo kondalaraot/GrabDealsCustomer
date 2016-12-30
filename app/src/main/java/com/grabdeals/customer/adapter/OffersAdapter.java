@@ -7,7 +7,6 @@ import android.support.v7.widget.RecyclerView;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.TextAppearanceSpan;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,15 +14,14 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
 
+import com.grabdeals.customer.R;
 import com.grabdeals.customer.model.Location;
 import com.grabdeals.customer.model.Offer;
-import com.grabdeals.customer.util.Constants;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import static android.content.ContentValues.TAG;
 
 /**
  * Created by KTirumalsetty on 11/17/2016.
@@ -129,7 +127,7 @@ public class OffersAdapter  extends RecyclerView.Adapter<OffersAdapter.MyViewHol
         @Override
         protected FilterResults performFiltering(CharSequence constraint) {
             mSearchText = constraint.toString();
-            if(Constants.DEBUG) Log.d(TAG,"performFiltering ");
+//            if(Constants.DEBUG) Log.d(TAG,"performFiltering ");
             FilterResults filterResults = new FilterResults();
 
             if (constraint == null || constraint.length() == 0) {
@@ -155,7 +153,7 @@ public class OffersAdapter  extends RecyclerView.Adapter<OffersAdapter.MyViewHol
         @Override
         protected void publishResults(CharSequence constraint,
                                       FilterResults results) {
-            if(Constants.DEBUG) Log.d(TAG,"publishResults ");
+//            if(Constants.DEBUG) Log.d(TAG,"publishResults ");
 
 			/*if (results.count == 0) {
 	            notifyDataSetInvalidated();
