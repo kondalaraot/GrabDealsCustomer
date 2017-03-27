@@ -48,7 +48,7 @@ public class ConfirmOTPActivity extends BaseAppCompatActivity implements View.On
     private Button mBtnResendOtp;
 
     private String mobileNo;
-    private String shopName;
+    private String mUserName;
     private String password;
     private Uri mImageCaptureUri;
     Bitmap mShopImageBitmap;
@@ -60,7 +60,7 @@ public class ConfirmOTPActivity extends BaseAppCompatActivity implements View.On
 //        setSupportActionBar(toolbar);
         mobileNo = getIntent().getStringExtra("KEY_MOBILE_NO");
         password = getIntent().getStringExtra("KEY_PASSWORD");
-        shopName = getIntent().getStringExtra("KEY_SHOP_NAME");
+        mUserName = getIntent().getStringExtra("KEY_USER_NAME");
         mShopImageBitmap = getIntent().getParcelableExtra("KEY_IMAGE_BITMAP");
         mImageCaptureUri = getIntent().getParcelableExtra("KEY_IMAGE_URI");
         findViews();
@@ -144,7 +144,7 @@ public class ConfirmOTPActivity extends BaseAppCompatActivity implements View.On
     private Map<String,String> preparePostParams(){
         Map<String, String> formParams = new HashMap<>();
         formParams.put(APIParams.PARAM_MOBILE_NO, mobileNo);
-        formParams.put(APIParams.PARAM_SHOP_NAME, shopName);
+        formParams.put(APIParams.PARAM_USER_NAME, mUserName);
         formParams.put(APIParams.PARAM_PASSWORD, password);
         formParams.put(APIParams.PARAM_OTP_CODE, mEnterOtp.getText().toString());
         if(mShopImageBitmap != null)
@@ -292,8 +292,8 @@ public class ConfirmOTPActivity extends BaseAppCompatActivity implements View.On
                         JSONObject account = data.getJSONObject("account");
                         getPrefManager().setAuthToken(authToken);
                         getPrefManager().setAccountID(account.getString("acc_id"));
-                        getPrefManager().setShopID(account.getString("shop_id"));
-                        getPrefManager().setShopName(account.getString("shop_name"));
+                        getPrefManager().setShopID(account.getString("user_id"));
+                        getPrefManager().setShopName(account.getString("user_name"));
                         getPrefManager().setShopMobileNO(account.getString("mobile_no"));
                         startActivity(new Intent(this,LoginActivity.class));
                         finish();

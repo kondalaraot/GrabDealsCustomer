@@ -168,7 +168,7 @@ public class RegisterShopKeeperActivity extends BaseAppCompatActivity implements
     private Map<String,String> preparePostParams(){
         Map<String, String> jsonParams = new HashMap<>();
         jsonParams.put(APIParams.PARAM_MOBILE_NO, mPhoneNo.getText().toString());
-        jsonParams.put(APIParams.PARAM_SHOP_NAME, mShopName.getText().toString());
+        jsonParams.put(APIParams.PARAM_USER_NAME, mShopName.getText().toString());
         return jsonParams;
     }
 
@@ -306,7 +306,7 @@ public class RegisterShopKeeperActivity extends BaseAppCompatActivity implements
                     Intent intent = new Intent(this,ConfirmOTPActivity.class);
                     intent.putExtra("KEY_MOBILE_NO",mPhoneNo.getText().toString());
                     intent.putExtra("KEY_PASSWORD",mPassword.getText().toString());
-                    intent.putExtra("KEY_SHOP_NAME",mShopName.getText().toString());
+                    intent.putExtra("KEY_USER_NAME",mShopName.getText().toString());
                     intent.putExtra("KEY_IMAGE_BITMAP",mShopImageBitmap);
                     intent.putExtra("KEY_IMAGE_URI",mImageCaptureUri);
 

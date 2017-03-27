@@ -190,31 +190,24 @@ public class LoginActivity extends BaseAppCompatActivity  implements VolleyCallb
                 Gson gson = new Gson();
                 Account accountObj = gson.fromJson(account.toString(), Account.class);
 //                MyApplication.sAccount = accountObj;
-                String shopID = account.getString("shop_id");
+                String shopID = account.getString("user_id");
                 String authToken = data.getString("auth_token");
                 if(Constants.DEBUG) Log.d(TAG,"authToken "+authToken);
                 getPrefManager().setAuthToken(authToken);
 //                JSONObject account = data.getJSONObject("account");
                 getPrefManager().setAuthToken(authToken);
                 getPrefManager().setAccountID(account.getString("acc_id"));
-                getPrefManager().setShopID(account.getString("shop_id"));
-                getPrefManager().setShopName(account.getString("shop_name"));
+                getPrefManager().setShopID(account.getString("user_id"));
+                getPrefManager().setShopName(account.getString("user_name"));
                 getPrefManager().setShopMobileNO(accountObj.getMobile_no());
                 getPrefManager().setShopWebsite(accountObj.getWeb_site());
                 String imageUrl = Constants.USER_AVATAR_URL+ getPrefManager().getAccID()+"_"+getPrefManager().getShopID()+".png";
-                if(Constants.DEBUG) Log.d(TAG,"Shop image url"+imageUrl);
+                if(Constants.DEBUG) Log.d(TAG,"User image url"+imageUrl);
                 getPrefManager().setShopUrl(imageUrl);
-                if(accountObj.getShop_branches()!=null && accountObj.getShop_branches().size()>0){
+
                     getPrefManager().setIsLogin(true);
                     Intent intent = new Intent(this,MainDrawerActivity.class);
                     startActivity(intent);
-                }else{
-                   /* Intent intent = new Intent(this,EnterShopDetailsActivity.class);
-                    intent.putExtra("ARG_SHOP_ID",shopID);
-                    startActivity(intent);*/
-
-                }
-
                 finish();
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));

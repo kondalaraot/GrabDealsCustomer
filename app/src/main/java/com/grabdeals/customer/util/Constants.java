@@ -17,7 +17,7 @@ public class Constants {
     public static final String API_LOGIN = "user/login";
 
 
-    public static final String API_OFFER_ALL ="user/offers/list";
+    public static final String API_OFFER_ALL ="offers/all";
     public static final String API_OFFER_DETAILS_BY_ID = "user/offer/";
     public static final String API_SEND_OTP_SIGN_UP = "user/send_otp/1";
     public static final String API_SEND_OTP = "user/send_otp";
