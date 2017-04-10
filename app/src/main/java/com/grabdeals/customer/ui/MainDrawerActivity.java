@@ -39,7 +39,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static android.view.View.VISIBLE;
 
@@ -110,10 +112,10 @@ public class MainDrawerActivity extends BaseAppCompatActivity
             public void onClick(View view, int position) {
 
                 Offer offer = mOffersList.get(position);
-                /*Intent intent = new Intent(MainDrawerActivity.this, OfferDetailsActivity.class);
+                Intent intent = new Intent(MainDrawerActivity.this, OfferDetailsActivity.class);
                 intent.putExtra("OFFER_ID", offer.getOffer_id());
                 intent.putExtra("OFFER_OBJ", offer);
-                startActivity(intent);*/
+                startActivity(intent);
             }
 
             @Override
@@ -276,11 +278,29 @@ public class MainDrawerActivity extends BaseAppCompatActivity
     }
 
     private void getOffersVolley() {
-        NetworkManager.getInstance().getRequest(Constants.API_OFFER_ALL, null, this,0);
+       /* GPSTracker tracker = new GPSTracker(this);
+        if (!tracker.canGetLocation()) {
+            tracker.showSettingsAlert();
+        } else {
+            latitude = tracker.getLatitude();
+            longitude = tracker.getLongitude();
+        }*/
+        NetworkManager.getInstance().getRequest(Constants.API_OFFER_ALL, getParams(), this,0);
 
     }
 
+    private Map<String, String> getParams(){
+        Map<String, String> jsonParams = new HashMap<>();
 
+        try {
+            jsonParams.put("location ", "17.437461#78.448288");
+//            jsonParams.put(APIParams.PARAM_PASSWORD, mPasswordView.getText().toString());
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return jsonParams;
+    }
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {

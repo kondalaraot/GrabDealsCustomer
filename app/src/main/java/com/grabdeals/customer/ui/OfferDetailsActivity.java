@@ -198,18 +198,18 @@ public class OfferDetailsActivity extends BaseAppCompatActivity implements Volle
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        if (item.getItemId() == R.id.action_delete) {
+        /*if (item.getItemId() == R.id.action_delete) {
             showDeleteAlertDialog();
         }else  if (item.getItemId() == R.id.action_edit) {
 //            showAlertDialog();
             if(mOffer !=null){
-              /*  Intent i=new Intent(this,PostOfferActivity.class);
+              *//*  Intent i=new Intent(this,PostOfferActivity.class);
                 i.putExtra("Type", Constants.EDIT_OFFER);
                 i.putExtra("OfferObj", mOffer);
-                startActivity(i);*/
+                startActivity(i);*//*
             }
 
-        }
+        }*/
         return super.onOptionsItemSelected(item);
     }
 

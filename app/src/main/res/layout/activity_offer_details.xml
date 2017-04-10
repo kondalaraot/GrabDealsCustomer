@@ -144,11 +144,11 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <com.grabdeals.shop.util.ClickableViewPager
+    <com.grabdeals.customer.util.ClickableViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-    <com.grabdeals.shop.ui.CirclePageIndicator
+    <com.grabdeals.customer.ui.CirclePageIndicator
         android:id="@+id/indicator"
         android:gravity="bottom|center_horizontal"
         app:indicator_spacing="5dp"
